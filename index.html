@@ -6,7 +6,7 @@
   <title>Portfolio - Chokanan Sangpa</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -17,83 +17,84 @@
     }
 
     body {
-      background-color: #fafafa;
-      color: #1a1a1a;
+      background: linear-gradient(135deg, #fdfbfb 0%, #f7f3f9 50%, #fcf5f7 100%);
+      color: #4a4a5a;
       line-height: 1.7;
-      letter-spacing: -0.01em;
     }
 
     /* Navbar */
     header {
       position: sticky;
       top: 0;
-      background: rgba(250, 250, 250, 0.88);
+      background: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(12px);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 8%;
+      padding: 18px 8%;
       z-index: 1000;
-      border-bottom: 1px solid #eaeaea;
+      border-bottom: 1px solid rgba(230, 220, 235, 0.6);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
     }
 
     .logo {
-      font-weight: 600;
-      font-size: 1.05rem;
-      color: #111111;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: #e56b82;
       text-decoration: none;
-      letter-spacing: 0.5px;
     }
 
     nav a {
-      color: #666666;
+      color: #7d7d8f;
       text-decoration: none;
-      margin-left: 28px;
-      font-size: 0.9rem;
+      margin-left: 24px;
+      font-size: 0.95rem;
+      font-weight: 400;
       transition: color 0.2s ease;
     }
 
     nav a:hover {
-      color: #000000;
+      color: #e56b82;
     }
 
-    /* Container & Headings */
+    /* Layout Containers */
     .container {
-      max-width: 960px;
+      max-width: 1000px;
       margin: auto;
-      padding: 90px 24px;
+      padding: 80px 24px;
     }
 
     .section-tag {
       text-align: center;
-      color: #888888;
-      font-size: 0.75rem;
-      font-weight: 500;
+      color: #d17b88;
+      font-size: 0.8rem;
+      font-weight: 600;
       letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .section-title {
       text-align: center;
-      font-size: 1.85rem;
+      font-size: 2rem;
       font-weight: 600;
-      color: #111111;
-      margin-bottom: 48px;
+      color: #3b3b4f;
+      margin-bottom: 45px;
     }
 
-    /* Minimalist Cards */
+    /* Pastel Cards */
     .card {
       background: #ffffff;
-      border: 1px solid #e5e5e5;
-      border-radius: 12px;
-      padding: 30px;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid #f0e6ed;
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(220, 205, 220, 0.2);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .card:hover {
-      border-color: #bbbbbb;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(215, 190, 215, 0.35);
     }
 
     /* Hero Section */
@@ -102,8 +103,7 @@
       align-items: center;
       justify-content: space-between;
       min-height: 75vh;
-      gap: 48px;
-      padding-top: 60px;
+      gap: 40px;
     }
 
     .hero-text {
@@ -111,64 +111,72 @@
     }
 
     .hero-greeting {
-      color: #666666;
+      display: inline-block;
+      background: #feeef2;
+      color: #e2637a;
+      padding: 6px 14px;
+      border-radius: 20px;
       font-size: 0.95rem;
-      font-weight: 400;
-      margin-bottom: 10px;
+      font-weight: 500;
+      margin-bottom: 16px;
     }
 
     .hero-title {
       font-size: 2.8rem;
-      font-weight: 600;
+      font-weight: 700;
       line-height: 1.25;
-      color: #0f172a;
-      margin-bottom: 20px;
+      color: #2e2e3d;
+      margin-bottom: 16px;
     }
 
     .hero-desc {
-      color: #555555;
+      color: #6b6b7e;
       font-size: 1rem;
-      margin-bottom: 32px;
-      max-width: 500px;
+      margin-bottom: 28px;
+      max-width: 480px;
       font-weight: 300;
     }
 
     .hero-btn {
       display: inline-block;
-      background: #111111;
+      background: #f48ca0;
       color: #ffffff;
-      padding: 10px 26px;
-      border-radius: 6px;
+      padding: 10px 28px;
+      border-radius: 30px;
       text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 400;
-      transition: background-color 0.2s ease;
+      font-weight: 500;
+      box-shadow: 0 6px 16px rgba(244, 140, 160, 0.35);
+      transition: background 0.2s ease, transform 0.2s ease;
     }
 
     .hero-btn:hover {
-      background: #333333;
+      background: #ea7a90;
+      transform: translateY(-2px);
     }
 
     .hero-img-wrapper {
-      width: 220px;
-      height: 280px;
-      border-radius: 12px;
+      width: 240px;
+      height: 300px;
+      border-radius: 24px;
       overflow: hidden;
-      border: 1px solid #e5e5e5;
-      background: #f0f0f0;
+      background: #fff0f3;
+      border: 4px solid #ffffff;
+      box-shadow: 0 12px 30px rgba(230, 205, 215, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .hero-img-wrapper img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: grayscale(10%);
     }
 
     /* Grids */
     .grid-2 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
     }
 
@@ -180,65 +188,66 @@
 
     .card h3 {
       margin-bottom: 10px;
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: #111111;
+      font-size: 1.2rem;
+      color: #383849;
     }
 
     .card p {
-      color: #555555;
-      font-size: 0.92rem;
+      color: #6d6d80;
+      font-size: 0.95rem;
       font-weight: 300;
     }
 
-    /* Minimal Badges */
+    /* Pastel Badges */
     .tag-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 20px;
+      gap: 8px;
+      margin-top: 18px;
     }
 
     .tag {
-      font-size: 0.75rem;
-      padding: 3px 9px;
-      border-radius: 4px;
-      background: #f3f4f6;
-      color: #4b5563;
-      border: 1px solid #e5e7eb;
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: #fdf2f4;
+      color: #d9657b;
+      border: 1px solid #fae1e6;
     }
 
     /* Contact Links */
     .contact-buttons {
       display: flex;
       justify-content: center;
-      gap: 12px;
+      gap: 14px;
       flex-wrap: wrap;
     }
 
     .contact-btn {
-      padding: 10px 22px;
-      border-radius: 6px;
+      padding: 10px 24px;
+      border-radius: 25px;
       background: #ffffff;
-      border: 1px solid #d4d4d4;
-      color: #111111;
+      border: 1px solid #eedde6;
+      color: #555568;
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 12px rgba(220, 210, 220, 0.2);
       transition: all 0.2s ease;
     }
 
     .contact-btn:hover {
-      background: #111111;
+      background: #f48ca0;
       color: #ffffff;
-      border-color: #111111;
+      border-color: #f48ca0;
+      transform: translateY(-2px);
     }
 
     footer {
       text-align: center;
-      padding: 40px 20px;
-      color: #888888;
+      padding: 36px 20px;
+      color: #9f9fae;
       font-size: 0.85rem;
-      border-top: 1px solid #eaeaea;
+      border-top: 1px solid #f0e6ed;
     }
 
     @media (max-width: 768px) {
@@ -247,11 +256,11 @@
         text-align: center;
       }
       .hero-desc {
-        margin: 0 auto 30px;
+        margin: 0 auto 28px;
       }
       header {
         flex-direction: column;
-        gap: 14px;
+        gap: 12px;
       }
       nav a {
         margin: 0 10px;
@@ -263,7 +272,7 @@
 
   <!-- Navbar -->
   <header>
-    <a href="#" class="logo">Chokanan Sangpa</a>
+    <a href="#" class="logo">🌸 Chokanan Sangpa</a>
     <nav>
       <a href="#home">หน้าแรก</a>
       <a href="#about">เกี่ยวกับฉัน</a>
@@ -277,15 +286,15 @@
   <!-- Hero Section -->
   <section id="home" class="container hero">
     <div class="hero-text">
-      <div class="hero-greeting">Portfolio / แนะนำตัว</div>
-      <h1 class="hero-title">ผมชื่อ<br>โชคอนันต์ แสงพา</h1>
+      <div class="hero-greeting">👋 ยินดีต้อนรับสู่พอร์ตโฟลิโอของผม</div>
+      <h1 class="hero-title">โชคอนันต์ แสงพา</h1>
       <p class="hero-desc">
-        นักเรียนชั้นมัธยมศึกษาปีที่ 6/3 ผู้สนใจด้านวิศวกรรม เทคโนโลยี และการออกแบบ มุ่งมั่นที่จะสร้างสรรค์โครงสร้างและระบบที่ใช้งานได้จริง พร้อมเรียนรู้และพัฒนาอย่างต่อเนื่อง
+        นักเรียนชั้นมัธยมศึกษาปีที่ 6/3 ผู้สนใจด้านวิศวกรรม เทคโนโลยี และการออกแบบ พร้อมเรียนรู้สิ่งใหม่ พัฒนาตนเอง และสร้างสรรค์สิ่งที่ใช้งานได้จริง
       </p>
-      <a href="#projects" class="hero-btn">ดูผลงาน</a>
+      <a href="#projects" class="hero-btn">ดูผลงานของผม</a>
     </div>
     <div class="hero-img-wrapper">
-      <img src="profile.jpg" alt="Chokanan Sangpa" />
+      <img src="profile.jpg" alt="Chokanan Sangpa" onerror="this.onerror=null; this.src='https://placehold.co/240x300/feeef2/e2637a?text=Profile+Photo';" />
     </div>
   </section>
 
@@ -294,13 +303,15 @@
     <div class="section-tag">About Me</div>
     <h2 class="section-title">เกี่ยวกับตัวผม</h2>
     <div class="grid-2">
-      <div class="card">
+      <div class="card" style="background: #fffdfd; border-color: #fbebee;">
+        <div style="font-size: 1.6rem; margin-bottom: 10px;">✨</div>
         <h3>ตัวตนและวิธีคิด</h3>
-        <p>ชอบการเรียนรู้สิ่งใหม่ ๆ สนใจกระบวนการนำองค์ความรู้เชิงทฤษฎีมาลงมือปฏิบัติจริง เน้นการคิดวิเคราะห์ การแก้ปัญหาอย่างเป็นระบบ และชอบทดลองสร้างชิ้นงานด้วยตนเอง</p>
+        <p>ชอบการเรียนรู้และทดลองทำสิ่งใหม่ ๆ สนใจการนำความรู้ภาคทฤษฎีมาลงมือแก้ปัญหาจริง เน้นการวิเคราะห์อย่างเป็นระบบ</p>
       </div>
-      <div class="card">
-        <h3>สิ่งที่สนใจเป็นพิเศษ</h3>
-        <p>หลงใหลในด้านเทคโนโลยี เว็บแอปพลิเคชัน และงานด้านวิศวกรรม โดยเฉพาะการวางแผน ออกแบบโครงสร้าง และระบบการทำงานที่มีประสิทธิภาพ</p>
+      <div class="card" style="background: #fafbfe; border-color: #ebf0fb;">
+        <div style="font-size: 1.6rem; margin-bottom: 10px;">💡</div>
+        <h3>สิ่งที่ชอบและสนใจ</h3>
+        <p>หลงใหลในงานพัฒนาเว็บไซต์ การวางโครงสร้างโปรแกรม รวมถึงงานด้านวิศวกรรมที่เน้นการออกแบบและสร้างประโยชน์ต่อผู้อื่น</p>
       </div>
     </div>
   </section>
@@ -309,21 +320,22 @@
   <section id="education" class="container">
     <div class="section-tag">Education Goal</div>
     <h2 class="section-title">เป้าหมายการศึกษา</h2>
-    <div class="card" style="text-align: center; max-width: 620px; margin: auto;">
-      <h3 style="font-size: 1.35rem; margin-bottom: 6px;">จุฬาลงกรณ์มหาวิทยาลัย</h3>
-      <p style="color: #111111; font-weight: 500; margin-bottom: 14px;">คณะวิศวกรรมศาสตร์ (วิศวกรรมโยธาและคอมพิวเตอร์)</p>
-      <p>ตั้งเป้าหมายนำความรู้ด้านคณิตศาสตร์และวิทยาศาสตร์ประยุกต์ มาต่อยอดเพื่อสร้างสรรค์และพัฒนาโครงสร้างพื้นฐานรวมถึงระบบเทคโนโลยีที่มีคุณค่าต่อสังคม</p>
+    <div class="card" style="text-align: center; max-width: 650px; margin: auto; background: #fffcfd; border-color: #faeef2;">
+      <div style="font-size: 2rem; margin-bottom: 10px;">🏛️</div>
+      <h3 style="font-size: 1.35rem; color: #2e2e3d;">จุฬาลงกรณ์มหาวิทยาลัย</h3>
+      <p style="color: #e2637a; font-weight: 500; margin-bottom: 12px;">คณะวิศวกรรมศาสตร์ (สาขาวิศวกรรมโยธาและคอมพิวเตอร์)</p>
+      <p>มุ่งมั่นนำความรู้ด้านคณิตศาสตร์ วิทยาศาสตร์ และระบบคอมพิวเตอร์ มาประยุกต์ร่วมกับการพัฒนาโครงสร้างพื้นฐานที่มีประโยชน์ต่อสังคม</p>
     </div>
   </section>
 
   <!-- Projects Section -->
   <section id="projects" class="container">
     <div class="section-tag">Projects</div>
-    <h2 class="section-title">ผลงานที่ผ่านมา</h2>
+    <h2 class="section-title">ผลงานที่เคยทำ</h2>
     <div class="grid-2">
       <div class="card">
-        <h3>Portfolio Website</h3>
-        <p>เว็บไซต์แนะนำตัวเอง ออกแบบในแนวทาง Minimalist รวบรวมประวัติการศึกษา เป้าหมาย และผลงานทางเทคโนโลยี</p>
+        <h3>💻 เว็บไซต์ Portfolio</h3>
+        <p>ออกแบบและพัฒนาหน้าเว็บไซต์แนะนำตัว รวบรวมข้อมูลส่วนตัว ทักษะ และเป้าหมายทางการศึกษา</p>
         <div class="tag-container">
           <span class="tag">HTML</span>
           <span class="tag">CSS</span>
@@ -331,8 +343,8 @@
         </div>
       </div>
       <div class="card">
-        <h3>Medical Exam System</h3>
-        <p>ระบบบันทึกและตรวจสอบผลการทดสอบ ประกอบด้วยระบบยืนยันตัวตน (Login) การจัดการและค้นหาข้อมูลผู้สมัคร รวมถึงระบบ Activity Log</p>
+        <h3>📊 Medical Exam System</h3>
+        <p>ระบบบันทึกและตรวจสอบผลการสอบ มีระบบจัดการสิทธิ์ผู้ใช้งาน ค้นหาข้อมูล และบันทึกประวัติการใช้งาน</p>
         <div class="tag-container">
           <span class="tag">Google Apps Script</span>
           <span class="tag">JavaScript</span>
@@ -342,22 +354,22 @@
     </div>
   </section>
 
-  <!-- Skills / Interests Section -->
+  <!-- Skills Section -->
   <section id="skills" class="container">
-    <div class="section-tag">Areas of Interest</div>
-    <h2 class="section-title">ขอบเขตความสนใจ</h2>
+    <div class="section-tag">Interests & Skills</div>
+    <h2 class="section-title">สิ่งที่ผมสนใจ</h2>
     <div class="grid-3">
-      <div class="card">
-        <h3>Civil Engineering</h3>
-        <p>การวิเคราะห์โครงสร้าง งานวางแผนก่อสร้าง และการออกแบบโครงสร้างพื้นฐาน</p>
+      <div class="card" style="background: #fffbfb;">
+        <h3>🏗️ วิศวกรรมโยธา</h3>
+        <p>การคำนวณโครงสร้าง งานก่อสร้าง และการออกแบบโครงสร้างอาคาร</p>
       </div>
-      <div class="card">
-        <h3>Technology</h3>
-        <p>การพัฒนาเว็บแอปพลิเคชัน การเขียนโปรแกรม และการจัดการระบบฐานข้อมูล</p>
+      <div class="card" style="background: #fbfbfe;">
+        <h3>💻 ซอฟต์แวร์และเว็บ</h3>
+        <p>การเขียนโค้ด การออกแบบระบบจัดการข้อมูล และเว็บแอปพลิเคชัน</p>
       </div>
-      <div class="card">
-        <h3>Design & Logic</h3>
-        <p>การคิดวิเคราะห์เชิงฟังก์ชันและการออกแบบเพื่อให้ใช้งานได้จริง</p>
+      <div class="card" style="background: #fcfdfa;">
+        <h3>📐 การออกแบบเชิงตรรกะ</h3>
+        <p>การจัดระบบความคิด การแก้ปัญหาที่ซับซ้อนให้ใช้งานได้จริง</p>
       </div>
     </div>
   </section>
@@ -365,12 +377,12 @@
   <!-- Contact Section -->
   <section id="contact" class="container" style="text-align: center;">
     <div class="section-tag">Contact</div>
-    <h2 class="section-title">ช่องทางการติดต่อ</h2>
-    <p style="color: #666666; margin-bottom: 28px; font-weight: 300;">หากมีข้อเสนอแนะหรือต้องการสอบถามข้อมูล สามารถติดต่อได้ผ่านช่องทางนี้</p>
+    <h2 class="section-title">ติดต่อผม</h2>
+    <p style="color: #7d7d8f; margin-bottom: 26px;">สามารถติดต่อหรือติดตามผลงานได้ผ่านช่องทางนี้</p>
     <div class="contact-buttons">
-      <a href="https://facebook.com" target="_blank" class="contact-btn">Facebook</a>
-      <a href="https://instagram.com" target="_blank" class="contact-btn">Instagram</a>
-      <a href="mailto:your-email@example.com" class="contact-btn">Email</a>
+      <a href="https://facebook.com" target="_blank" class="contact-btn">📘 Facebook</a>
+      <a href="https://instagram.com" target="_blank" class="contact-btn">📷 Instagram</a>
+      <a href="mailto:your-email@example.com" class="contact-btn">✉️ Email</a>
     </div>
   </section>
 
