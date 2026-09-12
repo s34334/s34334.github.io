@@ -1,392 +1,67 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - Suwapitcha Chatuthumthada</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Kanit', sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: linear-gradient(135deg, #fdfbfb 0%, #f7f3f9 50%, #fcf5f7 100%);
-      color: #4a4a5a;
-      line-height: 1.7;
-    }
-
-    /* Navbar */
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(12px);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 8%;
-      z-index: 1000;
-      border-bottom: 1px solid rgba(230, 220, 235, 0.6);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
-    }
-
-    .logo {
-      font-weight: 700;
-      font-size: 1.15rem;
-      color: #e56b82;
-      text-decoration: none;
-    }
-
-    nav a {
-      color: #7d7d8f;
-      text-decoration: none;
-      margin-left: 24px;
-      font-size: 0.95rem;
-      font-weight: 400;
-      transition: color 0.2s ease;
-    }
-
-    nav a:hover {
-      color: #e56b82;
-    }
-
-    /* Layout Containers */
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 80px 24px;
-    }
-
-    .section-tag {
-      text-align: center;
-      color: #d17b88;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2rem;
-      font-weight: 600;
-      color: #3b3b4f;
-      margin-bottom: 45px;
-    }
-
-    /* Pastel Cards */
-    .card {
-      background: #ffffff;
-      border: 1px solid #f0e6ed;
-      border-radius: 20px;
-      padding: 28px;
-      box-shadow: 0 8px 24px rgba(220, 205, 220, 0.2);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(215, 190, 215, 0.35);
-    }
-
-    /* Hero Section */
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 75vh;
-      gap: 40px;
-    }
-
-    .hero-text {
-      flex: 1;
-    }
-
-    .hero-greeting {
-      display: inline-block;
-      background: #feeef2;
-      color: #e2637a;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.95rem;
-      font-weight: 500;
-      margin-bottom: 16px;
-    }
-
-    .hero-title {
-      font-size: 2.8rem;
-      font-weight: 700;
-      line-height: 1.25;
-      color: #2e2e3d;
-      margin-bottom: 16px;
-    }
-
-    .hero-desc {
-      color: #6b6b7e;
-      font-size: 1rem;
-      margin-bottom: 28px;
-      max-width: 480px;
-      font-weight: 300;
-    }
-
-    .hero-btn {
-      display: inline-block;
-      background: #f48ca0;
-      color: #ffffff;
-      padding: 10px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 500;
-      box-shadow: 0 6px 16px rgba(244, 140, 160, 0.35);
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .hero-btn:hover {
-      background: #ea7a90;
-      transform: translateY(-2px);
-    }
-
-    .hero-img-wrapper {
-      width: 240px;
-      height: 300px;
-      border-radius: 24px;
-      overflow: hidden;
-      background: #fff0f3;
-      border: 4px solid #ffffff;
-      box-shadow: 0 12px 30px rgba(230, 205, 215, 0.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-img-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Grids */
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      font-size: 1.2rem;
-      color: #383849;
-    }
-
-    .card p {
-      color: #6d6d80;
-      font-size: 0.95rem;
-      font-weight: 300;
-    }
-
-    /* Pastel Badges */
-    .tag-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 18px;
-    }
-
-    .tag {
-      font-size: 0.8rem;
-      padding: 4px 12px;
-      border-radius: 20px;
-      background: #fdf2f4;
-      color: #d9657b;
-      border: 1px solid #fae1e6;
-    }
-
-    /* Contact Links */
-    .contact-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .contact-btn {
-      padding: 10px 24px;
-      border-radius: 25px;
-      background: #ffffff;
-      border: 1px solid #eedde6;
-      color: #555568;
-      text-decoration: none;
-      font-size: 0.95rem;
-      box-shadow: 0 4px 12px rgba(220, 210, 220, 0.2);
-      transition: all 0.2s ease;
-    }
-
-    .contact-btn:hover {
-      background: #f48ca0;
-      color: #ffffff;
-      border-color: #f48ca0;
-      transform: translateY(-2px);
-    }
-
-    footer {
-      text-align: center;
-      padding: 36px 20px;
-      color: #9f9fae;
-      font-size: 0.85rem;
-      border-top: 1px solid #f0e6ed;
-    }
-
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-      }
-      .hero-desc {
-        margin: 0 auto 28px;
-      }
-      header {
-        flex-direction: column;
-        gap: 12px;
-      }
-      nav a {
-        margin: 0 10px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ศุวพิชชา จตุธรรมธาดา | หน้าแรก</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header>
-    <a href="#" class="logo">🌸 Suwapitcha Chatuthumthada</a>
-    <nav>
-      <a href="#home">Home Page</a>
-      <a href="#about">About Me</a>
-      <a href="#education">Education</a>
-      <a href="#projects">Activity</a>
-      <a href="#skills">Interests</a>
-      <a href="#contact">Contact Me</a>
-    </nav>
-  </header>
+<div class="bg-aurora"></div>
+<div class="floaties"></div>
 
-  <!-- Hero Section -->
-  <section id="home" class="container hero">
-    <div class="hero-text">
-      <div class="hero-greeting">👋 Welcome to my portfolio</div>
-      <h1 class="hero-title">ศุวพิชชา จตุธรรมธาดา</h1>
-      <p class="hero-desc">
-        นักเรียนชั้นมัธยมศึกษาปีที่ 6/3 โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
-      </p>
-      <a href="#projects" class="hero-btn">ดูกิจกรรมของฉัน</a>
-    </div>
-    <div class="hero-img-wrapper">
-      <img src="profile.jpg" alt="Suwapitcha Chatuthumthada" onerror="this.onerror=null; this.src='https://placehold.co/240x300/feeef2/e2637a?text=Profile+Photo';" />
-    </div>
-  </section>
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="brand" data-transition><span class="bloom">🌸</span> Suwapitcha Chatuthumthada</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active" data-transition>Home Page</a></li>
+      <li><a href="about.html" data-transition>About Me</a></li>
+      <li><a href="education.html" data-transition>Education</a></li>
+      <li><a href="activity.html" data-transition>Activity</a></li>
+      <li><a href="interests.html" data-transition>Interests</a></li>
+      <li><a href="contact.html" data-transition>Contact Me</a></li>
+    </ul>
+  </div>
+</nav>
 
-  <!-- About Section -->
-  <section id="about" class="container">
-    <div class="section-tag">About Me</div>
-    <h2 class="section-title">เกี่ยวกับฉัน</h2>
-    <div class="grid-2">
-      <div class="card" style="background: #fafbfe; border-color: #ebf0fb; text-align: center;">
-        <div style="font-size: 1.6rem; margin-bottom: 10px;">🌤️</div>
-        <h3>ประวัติส่วนตัว</h3>
-        <div>
-          <p>ชื่อ-นามสกุล: นางสาวศุวพิชชา จตุธรรมธาดา</p>
-          <p>ชื่อเล่น: สายป่าน</p>
-          <p>วันเดือนปีเกิด: 5 มีนาคม พ.ศ.2552</p>
-          <p>อายุ: 17 ปี</p>
-          <p>แผนการเรียน: วิทย์-คณิต (MSEP)</p>
-        </div>
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <span class="badge-pill">👋 Welcome to my portfolio</span>
+      <h1>ศุวพิชชา จตุธรรมธาดา</h1>
+      <p class="lead">นักเรียนชั้นมัธยมศึกษาปีที่ 6/3 โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์" ผู้มีความฝันอยากเป็นนักกายภาพบำบัดที่ดูแลผู้ป่วยด้วยหัวใจ</p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="activity.html" class="btn btn-primary" data-transition>🎯 ดูกิจกรรมของฉัน</a>
+        <a href="about.html" class="btn btn-ghost" data-transition>รู้จักฉันเพิ่มเติม</a>
       </div>
+      <div class="tag-row">
+        <span class="tag-chip">💪 กายภาพบำบัด</span>
+        <span class="tag-chip">🔬 เทคนิคการแพทย์</span>
+        <span class="tag-chip">🏸 แบดมินตัน</span>
+        <span class="tag-chip">🏹 ยิงธนู</span>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <span class="ph-label">Profile Photo<br><small>images/profile.jpg</small></span>
+      <img src="../profile.jpg" alt="รูปโปรไฟล์ของศุวพิชชา" onerror="this.style.display='none'">
     </div>
   </section>
 
-  <!-- Education Section -->
-  <section id="education" class="container">
-    <div class="section-tag">Education Goal</div>
-    <h2 class="section-title">เป้าหมายการศึกษา</h2>
-    <div style="display: flex;">
-      <div class="card" style="text-align: center; max-width: 490px; margin-right: 10px; background: #fffcfd; border-color: #faeef2;">
-        <div style="font-size: 2rem; margin-bottom: 10px;">🎓</div>
-        <h3 style="font-size: 1.35rem; color: #2e2e3d;">จุฬาลงกรณ์มหาวิทยาลัย</h3>
-        <p style="color: #e2637a; font-weight: 500; margin-bottom: 12px;">คณะสหเวชศาสตร์ (สาขากายภาพบำบัด)</p>
-        <p>ข้าพเจ้ามีความสนใจอย่างยิ่งในด้านกายภาพบำบัดและการดูแลฟื้นฟูสุขภาพมนุษย์ เนื่องจากเห็นความสำคัญของการช่วยให้ผู้ป่วยสามารถกลับมาใช้ชีวิตประจำวันได้อย่างมีความสุขและมีคุณภาพชีวิตที่ดีขึ้น</p>
-      </div>
+  <div class="page-nav">
+    <a href="contact.html" class="btn btn-ghost" data-transition>← ย้อนกลับ: Contact Me</a>
+    <a href="about.html" class="btn btn-primary" data-transition>ถัดไป: About Me →</a>
+  </div>
+</main>
 
-      <div class="card" style="text-align: center; max-width: 490px; margin: auto; background: #fffcfd; border-color: #faeef2;">
-        <div style="font-size: 2rem; margin-bottom: 10px;">📚✏️</div>
-        <h3 style="font-size: 1.35rem; color: #2e2e3d;">เหตุผลในการเลือกคณะ/สาขา</h3>
-        <p>จุดเริ่มต้นความสนใจเกิดจากการได้ศึกษาและเห็นบทบาทสำคัญของนักกายภาพบำบัดในการฟื้นฟูร่างกายผู้ป่วย ทำให้ข้าพเจ้าเกิดแรงบันดาลใจที่จะเข้าศึกษาต่อในคณะสหเวชศาสตร์ สาขาวิชากายภาพบำบัด จุฬาลงกรณ์มหาวิทยาลัย ซึ่งเป็นสถาบันที่มีความพร้อมทั้งด้านวิชาการและอุปกรณ์การเรียนการสอน เพื่อพัฒนาตนเองไปสู่การเป็นนักกายภาพบำบัดที่มีจิตวิญญาณในการดูแลผู้ป่วยอย่างแท้จริง</p>
-      </div>
-    </div>
-  </section>
+<div class="mascot-wrap" aria-hidden="true">
+  <div class="mascot-inner">
+    <span class="mascot-char">🐰</span>
+    <span class="mascot-prop">👋</span>
+  </div>
+  <div class="mascot-shadow"></div>
+</div>
 
- <!-- Projects Section -->
-  <section id="projects" class="container">
-    <div class="section-tag">Activity</div>
-    <h2 class="section-title">กิจกรรมที่ชอบทำ</h2>
-    <div class="grid-1">
-      <div class="card">
-        <h3>🏹  ยิงธนู</h3>
-        <div style="text-align: center;">
-        <img src="Archer.jpg" alt="Acher Parn" onerror="this.onerror=null; this.src='../Acher.jpg';" style="width:200px; Height: 270px; border-radius: 10px;" />
-        </div>
-        <p>ในเวลาว่าง ข้าพเจ้าได้เข้าร่วมกิจกรรม ”การยิงธนู“ ซึ่งเป็นกิจกรรมที่ต้องใช้ทั้งสมาธิ ความอดทน และการควบคุมการทำงานของร่างกายและจิตใจให้เป็นหนึ่งเดียว การซ้อมยิงธนูสอนให้ข้าพเจ้ารู้จักการควบคุมลมหายใจ การวางท่าทางที่ถูกต้อง และการแก้ไขปัญหาเฉพาะหน้าด้วยความใจเย็น ซึ่งทักษะเหล่านี้เป็นคุณลักษณะสำคัญที่ข้าพเจ้าเชื่อว่าจะสามารถนำมาประยุกต์ใช้กับการฝึกฝนและการดูแลผู้ป่วยในสายงานกายภาพบำบัดได้เป็นอย่างดี</p>
-      </div>
-  </section>
-
-
-  <!-- Skills Section -->
-  <section id="skills" class="container">
-    <div class="section-tag">Interests & Skills</div>
-    <h2 class="section-title">สิ่งที่ฉันสนใจ</h2>
-    <div class="grid-3">
-      <div class="card" style="background: #fffbfb;">
-        <h3>💪 กายภาพบำบัด</h3>
-        <p>การดูแล ฟื้นฟู และป้องกันปัญหาที่เกี่ยวข้องกับการเคลื่อนไหวของร่างกาย โดยใช้วิธีการทางกายภาพแทนการผ่าตัดหรือการใช้ยาเป็นหลัก เพื่อช่วยให้ผู้ป่วยกลับมาเคลื่อนไหวและใช้ชีวิตประจำวันได้ดีขึ้น</p>
-      </div>
-      <div class="card" style="background: #fbfbfe;">
-        <h3>🔬 เทคนิคการแพทย์</h3>
-        <p>วิชาชีพทางการแพทย์ที่ทำงานเกี่ยวกับ การตรวจวิเคราะห์สิ่งส่งตรวจจากร่างกาย เพื่อช่วยแพทย์วินิจฉัยโรค ติดตามผลการรักษา และป้องกันโรค</p>
-      </div>
-      <div class="card" style="background: #fcfdfa;">
-        <h3>🏸 กีฬาแบดมินตัน</h3>
-        <p>กีฬาที่ใช้ไม้ตีลูกขนไก่ข้ามตาข่าย มีจุดมุ่งหมายเพื่อตีลูกให้ตกในพื้นที่สนามของฝ่ายตรงข้ามเพื่อทำคะแนน </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="container" style="text-align: center;">
-    <div class="section-tag">Contact Me</div>
-    <h2 class="section-title">ติดต่อฉัน</h2>
-    <p style="color: #7d7d8f; margin-bottom: 26px;">สามารถติดต่อฉันได้จากช่องทาง</p>
-    <div class="contact-buttons">
-      <a href="https://facebook.com" target="_blank" class="contact-btn">📘 Facebook: Suwapitcha Chatuthumthada</a>
-      <a href="https://instagram.com" target="_blank" class="contact-btn">📷 Instagram: snptz_</a>
-      <a href="mailto:your-email@example.com" class="contact-btn">✉️ Email: Suwapitcha.Saioarn00@gmail.com</a>
-    </div>
-  </section>
-
-  <footer>
-    © 2026 Suwapitcha Chatuthumthada — All Rights Reserved.
-  </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
