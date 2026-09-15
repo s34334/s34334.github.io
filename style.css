@@ -1,5 +1,5 @@
 /* =========================================================
-   สุวพิชชา จตุธรรมธาดา — Portfolio Stylesheet
+   ศวพิชชา จตุธรรมธาดา — Portfolio Stylesheet
    ธีม: การ์ตูนสดใส หลายสีพาสเทล อ่อนโยน ไม่จัดจ้านเกินไป
    ========================================================= */
 
@@ -580,4 +580,32 @@ footer{
     animation-iteration-count: 1 !important;
     transition-duration: .001ms !important;
   }
+}
+
+/* ---------- Bowling animation (Activity) ---------- */
+.bowling-scene{
+  position:relative;
+  height: 160px;
+  margin: 20px auto 6px;
+  max-width: 420px;
+}
+.pins{
+  position:absolute; right: 6px; top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.4rem;
+  display:flex; gap:4px;
+}
+.ball{
+  position:absolute; left: 0; top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.4rem;
+  animation: roll 2.6s cubic-bezier(.5,0,.4,1) infinite;
+}
+@keyframes roll{
+  0%{ left:0; opacity:1; transform: translateY(-50%) rotate(0deg); }
+  55%{ left: calc(100% - 100px); opacity:1; transform: translateY(-50%) rotate(720deg); }
+  60%{ left: calc(100% - 100px); opacity:0; }
+  61%{ left:0; opacity:0; }
+  75%{ opacity:0; }
+  100%{ left:0; opacity:1; }
 }
