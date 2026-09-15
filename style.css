@@ -609,3 +609,39 @@ footer{
   75%{ opacity:0; }
   100%{ left:0; opacity:1; }
 }
+
+/* ---------- Badminton animation (Interests) ---------- */
+.shuttle-bounce{
+  display:inline-block;
+  animation: shuttleHop 1.8s ease-in-out infinite;
+}
+@keyframes shuttleHop{
+  0%,100%{ transform: translateY(0) rotate(0deg); }
+  50%{ transform: translateY(-16px) rotate(20deg); }
+}
+
+/* ---------- Badminton animation (Activity) ---------- */
+.badminton-scene{
+  position:relative;
+  height: 160px;
+  margin: 20px auto 6px;
+  max-width: 420px;
+}
+.racket-left, .racket-right{
+  position:absolute; top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.4rem;
+}
+.racket-left{ left: 0; }
+.racket-right{ right: 0; transform: translateY(-50%) scaleX(-1); }
+.shuttle{
+  position:absolute; left: 60px; top: 50%;
+  font-size: 1.8rem;
+  animation: rally 2.4s ease-in-out infinite;
+}
+@keyframes rally{
+  0%{ left: 60px; top: 50%; transform: translateY(-50%) rotate(0deg); }
+  25%{ left: 50%; top: 18%; transform: translateY(-50%) rotate(90deg); }
+  50%{ left: calc(100% - 100px); top: 50%; transform: translateY(-50%) rotate(180deg); }
+  75%{ left: 50%; top: 18%; transform: translateY(-50%) rotate(270deg); }
+  100%{ left: 60px; top: 50%; transform: translateY(-50%) rotate(360deg); }
